@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="djpwr-models",
-    version="0.0.1",
+    version="0.0.2",
     description="DJPWR - Models",
     license='MIT',
     author="Ruud de Klerk",
@@ -10,4 +10,3 @@ setup(
     url='https://github.com/djpwr/djpwr-models',
     packages=find_packages()
 )
-
