@@ -11,17 +11,17 @@ class QueryPage:
                  merge_final_results: int = None):
 
         self.queryset = queryset
-        self.current_page = current_page
+        self.current_page = int(current_page)
 
         if page_size is None:
             self.page_size = settings.PAGINATION['page_size']
         else:
-            self.page_size = page_size
+            self.page_size = int(page_size)
 
         if merge_final_results is None:
             self.merge_final_results = settings.PAGINATION['merge_final_results']
         else:
-            self.merge_final_results = merge_final_results
+            self.merge_final_results = int(merge_final_results)
 
     def __iter__(self):
         for row in self.rows:

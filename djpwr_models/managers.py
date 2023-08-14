@@ -55,7 +55,7 @@ def attr_filter(attr_lookup, filter_value=None, *, allow_only_values=None):
         )
 
 
-def attr_filter_arg_value(attr_lookup, *, only_values=None):
+def attr_filter_arg_value(attr_lookup, *, allow_only_values=None):
     """
     Create a Manager filter method based on an ORM attribute lookup
 
@@ -77,10 +77,10 @@ def attr_filter_arg_value(attr_lookup, *, only_values=None):
 
         return self.filter(**filter_kwargs)
 
-    if only_values is None:
+    if allow_only_values is None:
         return filter_func
 
-    return allow_only_values(*only_values)(filter_func)
+    return allow_only_values(*allow_only_values)(filter_func)
 
 
 def attr_filter_fixed_value(attr_lookup, value, allow_only_values=None):
