@@ -2,7 +2,6 @@
 name = "djpwr-models"
 description = "DJPWR - Models"
 version = "0.0.4"
-license = "MIT"
 license-files = [
     "LICENSE"
 ]
