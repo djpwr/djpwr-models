@@ -38,3 +38,15 @@ class ReusableForeignKey(models.ForeignKey):
         del kwargs['verbose_name']
 
         return name, path, args, kwargs
+
+
+OPTIONAL = {
+    'null': True,
+    'blank': True
+}
+
+OPTIONAL_NONE = {
+    'null': True,
+    'blank': True,
+    'default': None
+}

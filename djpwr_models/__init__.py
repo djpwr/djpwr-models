@@ -1,3 +1,4 @@
+from .fields import OPTIONAL, OPTIONAL_NONE
 from .managers import (
     get_manager, from_queryset, attr_filter, allow_only_values
 )
@@ -11,4 +12,5 @@ __all__ = [
     'attr_filter', 'allow_only_values',
     'PowerQuerySet',
     'QueryPage',
+    'OPTIONAL', 'OPTIONAL_NONE',
 ]

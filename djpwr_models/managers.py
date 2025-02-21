@@ -23,8 +23,8 @@ def get_manager(manager_label):
     return model_class._default_manager
 
 
-def from_queryset(qs_class):
-    return BaseManager.from_queryset(qs_class)
+def from_queryset(queryset_class):
+    return BaseManager.from_queryset(queryset_class)
 
 
 def attr_filter(attr_lookup, filter_value=None, *, allow_only_values=None):
@@ -153,5 +153,7 @@ __all__ = [
     'get_manager',
     'from_queryset',
     'attr_filter',
+    'attr_filter_arg_value',
+    'attr_filter_fixed_value',
     'allow_only_values',
 ]

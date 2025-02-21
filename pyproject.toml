@@ -1,0 +1,17 @@
+[project]
+name = "djpwr-models"
+description = "DJPWR - Models"
+version = "0.0.4"
+license = "MIT"
+license-files = [
+    "LICENSE"
+]
+readme = "README.md"
+authors = [
+    { name = "Ruud de Klerk", email = "ruud@codeveloped.nl" }
+]
+dependencies = [
+]
+
+[project.urls]
+Repository = "https://github.com/djpwr/djpwr-models"

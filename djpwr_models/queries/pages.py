@@ -32,16 +32,15 @@ class QueryPage:
         start_offset = (self.current_page - 1) * self.page_size
         end_offset = self.current_page * self.page_size
 
-        if self.current_page == self.page_count:
-            return self.queryset[start_offset:]
-        elif self.current_page > self.page_count:
-            return self.queryset.none()
-        else:
-            return self.queryset[start_offset:end_offset]
+        return self.queryset[start_offset:end_offset]
 
     @cached_property
     def result_count(self) -> int:
         return self.queryset.count()
+
+    @property
+    def current_page_valid(self):
+        return 1 <= self.current_page <= self.page_count
 
     @property
     def has_previous_page(self) -> bool:
