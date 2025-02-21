@@ -2,9 +2,7 @@
 name = "djpwr-models"
 description = "DJPWR - Models"
 version = "0.0.4"
-license-files = [
-    "LICENSE"
-]
+license = "MIT"
 readme = "README.md"
 authors = [
     { name = "Ruud de Klerk", email = "ruud@codeveloped.nl" }
